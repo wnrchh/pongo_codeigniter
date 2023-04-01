@@ -1,0 +1,14 @@
+//kode copy project (MASUK KE HTDOCS)
+git clone LINK
+
+
+//ini kode kirim data (masuk ke folder)
+git status
+git add .
+git commit -m 'update'
+git push
+
+
+
+//ini untuk ambil data (dalam folder)
+git pull
