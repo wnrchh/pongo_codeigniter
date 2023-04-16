@@ -59,9 +59,9 @@
 		optionPagingElement 	: '#option', 
 		pageInfoElement 		: '#info',
 		columns					: [
-	        {field: 'kelas_id', title: 'Kelas_id', editable: true, sortable: true, width: 450, align: 'left', search: true},
-	        {field: 'mata_pelajaran_id', title: 'Mata Pelajaran_id', editable: true, sortable: true, width: 450, align: 'left', search: true},
-	        {field: 'guru_id', title: 'Guru_id', editable: true, sortable: true, width: 450, align: 'left', search: true},
+	        {field: 'kelas_id', title: 'Kelas', editable: true, sortable: true, width: 450, align: 'left', search: true},
+	        {field: 'mata_pelajaran_id', title: 'Mata Pelajaran', editable: true, sortable: true, width: 450, align: 'left', search: true},
+	        {field: 'guru_id', title: 'Guru', editable: true, sortable: true, width: 450, align: 'left', search: true},
 	        {field: 'hari', title: 'Hari', editable: true, sortable: true, width: 450, align: 'left', search: true},
 	        {field: 'jam', title: 'Jam', editable: true, sortable: true, width: 450, align: 'left', search: true},
 

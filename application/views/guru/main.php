@@ -15,10 +15,16 @@
 					<div class="content-box">
 						<div class="content-box-header">
 							<div class="row">
-								<div class="col-md-3">
+								<div class="col-md-2">
 									<button class="btn btn-dark" onclick="main_routes('create', '')"><i class="fa fa-pencil"></i> Add New Guru</button>
 								</div>
-								<div class="col-md-3">
+								<div class="col-md-1">
+									<button class="btn btn-dark" onclick="cetak_pdf()"><i class="fa fa-file-pdf-o"></i> Pdf</button>
+								</div>
+								<div class="col-md-1">
+									<button class="btn btn-dark" onclick="cetak_excel()"><i class="fa fa-file-excel-o"></i> Excel</button>
+								</div>
+								<div class="col-md-1">
 									<button class="btn btn-dark" onclick="print_guru();"><i class="fa fa-print"></i> Print</button>
 								</div>
 								<div class="col-md-6 form-inline justify-content-end">
@@ -140,6 +146,14 @@ function images_format(rowData, rowIndex) {
 	function print_guru() {
 		window.open('<?=base_url()?>guru/print');
 	}
+
+	function cetak_pdf() {
+		window.open('<?=base_url()?>pdf/guru');
+	}
+	function cetak_excel() {
+		window.open('<?=base_url()?>excel/guru');
+	}
+
 
 
 </script>

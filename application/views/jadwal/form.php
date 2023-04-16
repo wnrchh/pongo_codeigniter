@@ -29,20 +29,38 @@ foreach ($kelas as $key => $value) {?>
 ?>
 						    </select>
 						</div>
-						<div class="form-group">
-							<label for="">Mata Pelajaran</label>
-							<select name="mata_pelajaran_id" class="form-control select2">
+
+
+						<table class="table table-bordered">
+							<thead>
+							<tr>
+								<th>No</th>
+								<th>Nama</th>
+								<th>Guru</th>
+								<th>Hari</th>
+								<th>Jam</th>
+								
+							</tr>
+								</thead>
+								<tbody>
 
 <?php 
-foreach ($mata_pelajaran as $key => $value) {?>
-	
+$no = 0;
+foreach ($mata_pelajaran as $key => $value)
+foreach ($data_guru as $key => $value) {
 
-						<option value="<?=$value->id?>"><?=$value->mata_pelajaran?></option>	
+$no++;
+ ?>
 
-						
-<?php
+ <?php
 }
 ?>
+
+
+
+
+
+						
 						    </select>
 						</div>
 						<div class="form-group">
@@ -78,7 +96,27 @@ foreach ($data_guru as $key => $value) {?>
 							<input class="form-control" name="jam" placeholder="Jam" type="text">
 							<div class="validation-message" data-field="jam"></div>
 						</div>
-						
+
+						</tr>
+
+						<tr>
+										<td><?=$no?></td>
+										<td><input class="form-control" name="mata_pelajaran_id[]" type="hidden" value="<?=$value->id?>"> <?=$value->mata_pelajaran?></td>
+										<td><input class="form-control" name="guru_id" type="text" value="<?=$value->id?>"><?=$data_guru->nama?> </td>
+										<td><select class="form-control" placeholder="Hari" type="text"></select></td>
+										<td><select class="form-control" id="tampil_keterangan_<?=$value->id?>" name="keterangan_<?=$value->id?>" placeholder="Keterangan" type="text"></select></td>
+
+									</tr>
+
+
+
+
+								<?php } ?>
+
+								</tbody>
+							
+						</table>
+
 						
 					</form>
 					<div class="content-box-footer">
